@@ -1,8 +1,13 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Image, StyleSheet, TextInput } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView, TouchableOpacity, Image, StyleSheet, TextInput, Switch } from 'react-native'
+import React, { useState } from 'react'
 import CustomButton from '../Components/ReusableComponets/CustomButton'
+// import ToggleSwitch from 'toggle-switch-react-native'
 
-export default function Login() {
+export default function Login({ navigation }) {
+
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
             <View style={{ alignItems: 'center', marginTop: 30 }}>
@@ -29,14 +34,23 @@ export default function Login() {
             </View>
             <CustomButton
                 title={'Send OTP'}
+                onPress={() => navigation.navigate('Otp')}
+
             />
-            <View style={{ justifyContent: 'space-evenly', flexDirection: 'row', marginHorizontal: 30 }}>
+            <View style={{ justifyContent: 'space-evenly', flexDirection: 'row', marginHorizontal: "20%" }}>
                 <Image
                     style={{ height: 25, width: 25, }}
                     source={require('../assets/whatsappicone.png')}
                 />
                 <View><Text style={{ color: "black" }}>Notifications</Text></View>
-                <View><Text style={{ color: "black" }}>Notifications</Text></View>
+
+                <Switch
+                    trackColor={{ false: '#767577', true: '#F58850' }}
+                    thumbColor={isEnabled ? '#F58850' : '#f4f3f4'}
+                    ios_backgroundColor="#3e3e3e"
+                    onValueChange={toggleSwitch}
+                    value={isEnabled}
+                />
 
             </View>
 
