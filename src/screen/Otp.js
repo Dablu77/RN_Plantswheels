@@ -6,14 +6,14 @@ import CustomButton from '../Components/ReusableComponets/CustomButton';
 
 const { width, height } = Dimensions.get('window')
 
-export default function Otp() {
+export default function Otp({ navigation }) {
     const [pin, setPin] = useState('');
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Withe }}>
             <View style={{ alignItems: 'center', top: 20, paddingVertical: 40 }}>
                 <Image
-                    style={{ height: height / 5, width: width / 3, borderRadius: 10 }}
-                    source={require('../assets/logo.jpeg')}
+                    style={{ height: height / 6, width: width / 2.4, borderRadius: 10 }}
+                    source={require('../assets/Scootersmall.png')}
                 />
             </View>
             <View style={{ alignItems: 'center', }}>
@@ -42,7 +42,7 @@ export default function Otp() {
             <View style={{ marginVertical: 50 }}>
                 <CustomButton
                     title={'Verify & Proceed'}
-                    onPress={() => navigation.navigate('Otp')}
+                    onPress={() => navigation.navigate('Signup')}
 
                 />
             </View>

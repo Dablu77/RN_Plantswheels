@@ -1,7 +1,10 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Image, StyleSheet, TextInput, Switch } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, Image, StyleSheet, TextInput, Switch, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import CustomButton from '../Components/ReusableComponets/CustomButton'
 // import ToggleSwitch from 'toggle-switch-react-native'
+
+const { width, height } = Dimensions.get('window')
+
 
 export default function Login({ navigation }) {
 
@@ -13,10 +16,10 @@ export default function Login({ navigation }) {
             <View style={{ alignItems: 'center', marginTop: 30 }}>
                 <Text style={{ color: '#097150', fontSize: 20, fontWeight: 'bold', textAlign: 'center' }}>Earn money by partnering with local shops</Text>
             </View>
-            <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+            <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 15 }}>
                 <Image
-                    style={{ height: '50%', width: "50%", }}
-                    source={require('../assets/logo.jpeg')}
+                    style={{ height: height / 4, width: width / 1.5 }}
+                    source={require('../assets/Scootersmall.png')}
                 />
             </View>
             <View style={styles.textInputCntnr}>
@@ -66,7 +69,10 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginHorizontal: 20,
         backgroundColor: 'white',
-        paddingHorizontal: 15
+        paddingHorizontal: 15,
+        marginTop: "22%",
+
+
 
     },
     input: {
