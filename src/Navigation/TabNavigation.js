@@ -24,7 +24,6 @@ function TabNavigation() {
                 tabBarHideOnKeyboard: true,
 
                 tabBarStyle: {
-                    // backgroundColor: Colors.darkOrange,
                     height: 55,
                 },
                 tabBarLabelStyle: {

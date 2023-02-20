@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Colors from '../Components/utils/Colors'
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 import CustomButton from '../Components/ReusableComponets/CustomButton';
+import { fontPixel } from '../Components/ReusableComponets/Dimensions';
 
 const { width, height } = Dimensions.get('window')
 
@@ -17,7 +18,7 @@ export default function Otp({ navigation }) {
                 />
             </View>
             <View style={{ alignItems: 'center', }}>
-                <Text style={{ color: Colors.Balck, fontSize: 18, fontWeight: '500' }}>OTP Verification</Text>
+                <Text style={{ color: Colors.Balck, fontSize: fontPixel(18), fontWeight: '500' }}>OTP Verification</Text>
                 <Text style={{ color: Colors.Balck, fontSize: 15, marginTop: 10, fontWeight: '500' }}>Code sent to +99******56</Text>
 
             </View>
