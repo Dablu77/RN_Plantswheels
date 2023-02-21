@@ -7,6 +7,7 @@ import AadhaarScreen from '../../screen/AadhaarScreen';
 import EmergencyInfoScreen from '../../screen/EmergencyInfoScreen';
 import DrivingLicenseScreen from '../../screen/DrivingLicenseScreen';
 import TabNavigation from '../TabNavigation';
+import DrowerNavigation from '../DrowerNavigation';
 
 const Stack = createNativeStackNavigator();
 function AuthStack() {
@@ -17,11 +18,7 @@ function AuthStack() {
         component={Login}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="Otp"
-        component={Otp}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="Otp" component={Otp} options={{ headerShown: false }} />
       <Stack.Screen
         name="Signup"
         component={Signup}
@@ -45,6 +42,11 @@ function AuthStack() {
       <Stack.Screen
         name="TabNavigation"
         component={TabNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DrowerNavigation"
+        component={DrowerNavigation}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

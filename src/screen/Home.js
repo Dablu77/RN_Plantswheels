@@ -4,7 +4,7 @@ import { heightPixel } from '../Components/ReusableComponets/Dimensions';
 import Colors from '../Components/utils/Colors';
 import MapView from 'react-native-maps';
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <SafeAreaView>
       <View
@@ -31,7 +31,9 @@ export default function Home() {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+          // onPress={() => navigation.openDrawer()}
+          >
             <Image
               style={{ height: 30, width: 30, borderRadius: 20 }}
               source={require('../assets/Ellipse.png')}
