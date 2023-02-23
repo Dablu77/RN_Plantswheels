@@ -4,7 +4,7 @@ import React from 'react'
 export default function Earning() {
     return (
         <View>
-            <Text style={{ color: 'black' }}>Earning</Text>
+            <Text>Earning</Text>
         </View>
     )
 }

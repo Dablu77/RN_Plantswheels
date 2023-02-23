@@ -159,7 +159,7 @@ export default function Signup({ navigation }) {
             <View style={{}}>
                 <CustomButton
                     title={'Verify & Proceed'}
-                    onPress={() => navigation.navigate('TabNavigation')}
+                    onPress={() => navigation.navigate('DrowerNavigation')}
 
                 />
             </View>

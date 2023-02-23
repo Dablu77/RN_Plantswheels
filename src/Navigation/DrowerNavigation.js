@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Colors from '../Components/utils/Colors';
 import CustomDrawerMenu from '../Components/DrawerMenu/CustomDrawerMenu';
-import Earning from '../screen/Earning';
-
+import Home from '../screen/Home';
+import TabNavigation from './TabNavigation';
 
 const Drawer = createDrawerNavigator();
-export default function DrowerNavigation() {
+
+export default function Drawernavigation({ }) {
     return (
         <Drawer.Navigator
             drawerContent={props => <CustomDrawerMenu {...props} />}
@@ -15,12 +16,13 @@ export default function DrowerNavigation() {
                 drawerInactiveTintColor: '#150F0F',
                 drawerActiveTintColor: '#563D31',
                 headerShown: false,
-                headerStyle: {
-                    backgroundColor: Colors.Orange,
-                },
+
+
+
+
+                // headerTintColor: 'white',
             }}>
-            <Drawer.Screen name="ALL IN ONE" component={Earning} />
+            <Drawer.Screen name="BottomNavigator" component={TabNavigation} />
         </Drawer.Navigator>
     );
 }
-

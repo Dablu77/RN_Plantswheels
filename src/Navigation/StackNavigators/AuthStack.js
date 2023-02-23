@@ -8,6 +8,7 @@ import EmergencyInfoScreen from '../../screen/EmergencyInfoScreen';
 import DrivingLicenseScreen from '../../screen/DrivingLicenseScreen';
 import TabNavigation from '../TabNavigation';
 import DrowerNavigation from '../DrowerNavigation';
+import Personaldetails from '../../screen/Personaldetails';
 
 const Stack = createNativeStackNavigator();
 function AuthStack() {
@@ -47,6 +48,11 @@ function AuthStack() {
       <Stack.Screen
         name="DrowerNavigation"
         component={DrowerNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Personaldetails"
+        component={Personaldetails}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

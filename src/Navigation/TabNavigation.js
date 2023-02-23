@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -10,12 +10,19 @@ import NotificationIcone from '../assets/NotificationIcone.png'
 import Earning from '../screen/Earning';
 import Notification from '../screen/Notification';
 
+
 const Tab = createBottomTabNavigator();
 
 function TabNavigation() {
 
+
+
+
+
+
     return (
         <Tab.Navigator
+
             screenOptions={{
                 showLabel: false,
                 headerShown: true,

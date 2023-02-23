@@ -32,7 +32,9 @@ export default function Home({ navigation }) {
           </TouchableOpacity>
 
           <TouchableOpacity
-          // onPress={() => navigation.openDrawer()}
+            // onPress={() => navigation.openDrawer()}
+            onPress={() => navigation.openDrawer()}
+
           >
             <Image
               style={{ height: 30, width: 30, borderRadius: 20 }}
