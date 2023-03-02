@@ -111,6 +111,8 @@ const CustomDrawerMenu = props => {
                     </View>
                     <View style={{ marginTop: 15, paddingHorizontal: 20 }}>
                         <TouchableOpacity
+                            onPress={() => props.navigation.navigate('OrderHistory')}
+
                             style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <View
                                 style={{
@@ -165,6 +167,8 @@ const CustomDrawerMenu = props => {
                     </View>
                     <View style={{ marginTop: 15, paddingHorizontal: 20 }}>
                         <TouchableOpacity
+                            onPress={() => props.navigation.navigate('Support')}
+
                             style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <View
                                 style={{
@@ -226,6 +230,7 @@ const CustomDrawerMenu = props => {
                     <View style={{ marginTop: 15, paddingHorizontal: 20 }}>
                         <TouchableOpacity
                             onPress={() => props.navigation.navigate('Personaldetails')}
+
                             style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <View
                                 style={{
@@ -280,6 +285,8 @@ const CustomDrawerMenu = props => {
                     </View>
                     <View style={{ marginTop: 15, paddingHorizontal: 20 }}>
                         <TouchableOpacity
+                            onPress={() => props.navigation.navigate('Accountdetails')}
+
                             style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <View
                                 style={{
@@ -353,7 +360,7 @@ const CustomDrawerMenu = props => {
                     </TouchableOpacity>
                     <CustomButton
                         title='Invite'
-                        onPress={() => { console.log("hey") }}
+                        onPress={() => { props.navigation.navigate("LetsShare") }}
                     />
                 </View>
             </DrawerContentScrollView>

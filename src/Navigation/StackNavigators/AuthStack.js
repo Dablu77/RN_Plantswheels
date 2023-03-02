@@ -9,6 +9,11 @@ import DrivingLicenseScreen from '../../screen/DrivingLicenseScreen';
 import TabNavigation from '../TabNavigation';
 import DrowerNavigation from '../DrowerNavigation';
 import Personaldetails from '../../screen/Personaldetails';
+import Support from '../../screen/Support';
+import OrderHistory from '../../screen/OrderHistory';
+import Accountdetails from '../../screen/Accountdetails';
+import LetsShare from '../../screen/LetsShare ';
+import OrderDetailsScreen from '../../screen/OrderDetailsScreen';
 
 const Stack = createNativeStackNavigator();
 function AuthStack() {
@@ -53,6 +58,31 @@ function AuthStack() {
       <Stack.Screen
         name="Personaldetails"
         component={Personaldetails}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Support"
+        component={Support}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="OrderHistory"
+        component={OrderHistory}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Accountdetails"
+        component={Accountdetails}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LetsShare"
+        component={LetsShare}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="OrderDetailsScreen"
+        component={OrderDetailsScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
