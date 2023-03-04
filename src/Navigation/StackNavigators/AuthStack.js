@@ -14,6 +14,8 @@ import OrderHistory from '../../screen/OrderHistory';
 import Accountdetails from '../../screen/Accountdetails';
 import LetsShare from '../../screen/LetsShare ';
 import OrderDetailsScreen from '../../screen/OrderDetailsScreen';
+import WalletScreen from '../../screen/WalletScreen';
+import MoneyTransfers from '../../screen/MoneyTransfers';
 
 const Stack = createNativeStackNavigator();
 function AuthStack() {
@@ -83,6 +85,16 @@ function AuthStack() {
       <Stack.Screen
         name="OrderDetailsScreen"
         component={OrderDetailsScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="WalletScreen"
+        component={WalletScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MoneyTransfers"
+        component={MoneyTransfers}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

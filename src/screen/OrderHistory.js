@@ -4,8 +4,10 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Colors from '../Components/utils/Colors';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { fontPixel, heightPixel, widthPixel } from '../Components/ReusableComponets/Dimensions';
+
 
 
 
@@ -13,10 +15,12 @@ export default function OrderHistory({ navigation }) {
 
     const [date, setDate] = useState('');
     const [getDate, setGetDate] = useState('');
+
     const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
 
     const showDatePicker = () => {
+        console.log("hey");
         setDatePickerVisibility(true);
         AsyncStorage.getItem('Date').then(value => setGetDate(value));
     };
@@ -133,7 +137,7 @@ export default function OrderHistory({ navigation }) {
                         onCancel={hideDatePicker}
                     />
                     <TouchableOpacity onPress={showDatePicker}>
-                        <FontAwesome5 name="calendar-times" color={Colors.Orange} size={25} />
+                        <Ionicons name="md-calendar-sharp" color={Colors.Orange} size={25} />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -161,7 +165,9 @@ export default function OrderHistory({ navigation }) {
                             <Ionicons name="location-sharp" color={Colors.Lightgrey} size={25} />
                         </View>
                         <View style={{ marginTop: "10%", flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 15 }}>
-                            <TouchableOpacity style={{ borderRadius: 20, backgroundColor: Colors.Green, paddingVertical: 10, width: widthPixel(120), alignItems: "center", justifyContent: 'center' }}>
+                            <TouchableOpacity
+
+                                style={{ borderRadius: 20, backgroundColor: Colors.Green, paddingVertical: 10, width: widthPixel(120), alignItems: "center", justifyContent: 'center' }}>
                                 <Text style={{ color: Colors.Withe, fontWeight: "500", fontSize: 16 }}>{Value.Price}</Text>
                             </TouchableOpacity>
                             <Text style={{ color: Colors.Balck, color: Colors.Lightgrey, fontWeight: '500', }}>Distance {Value.Distance}</Text>

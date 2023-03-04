@@ -9,6 +9,7 @@ import EarningIcone from '../assets/Earning.png'
 import NotificationIcone from '../assets/NotificationIcone.png'
 import Earning from '../screen/Earning';
 import Notification from '../screen/Notification';
+import EarningStack from './StackNavigators/EarningStack';
 
 
 const Tab = createBottomTabNavigator();
@@ -59,7 +60,7 @@ function TabNavigation() {
             />
             <Tab.Screen
                 name="Earning"
-                component={Earning}
+                component={EarningStack}
                 options={{
                     headerShown: false,
                     tabBarColor: Colors.Orange,
